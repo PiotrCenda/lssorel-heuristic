@@ -1,11 +1,17 @@
 import timeit
 import numpy as np
-
+import wandb
 
 def on_generation(ga_instance):
     """Determine what happens with the beginning of every generation."""
     print(f"Generation = {ga_instance.generations_completed}")
     print(f"Best solution fitness = {ga_instance.best_solutions_fitness[-1]}")
+    wandb.log(
+        {
+            "fitness": ga_instance.best_solutions_fitness[-1],
+            "generation": ga_instance.generations_completed,
+        }
+    )
 
     
 
