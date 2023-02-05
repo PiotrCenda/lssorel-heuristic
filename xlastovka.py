@@ -51,7 +51,7 @@ def xlastovka_search(L: int, valueTarget: int) -> Tuple[int, int]:
         coord, _ = PQ.pop(0)
         
         # search neighborhood
-        for i in range(1, (L + 1) / 2 + 1):
+        for i in range(0, (L + 1) / 2 + 1):
             # flip i-th bit
             sFlipped = flip_bit(coord, i)
             
