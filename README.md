@@ -4,7 +4,7 @@ Implementation of xLastovka algorithm [[1]](#1) - a heuristic algorithm for low 
 
 ### About
 
-The project was written in Python using the PyGad framework as a backbone providing a mechanism to carry out an evolutionary algorithm, to which we add an implemented extension.
+The project was written in Python using the PyGad framework [[2]](#2)  as a backbone providing a mechanism to carry out an evolutionary algorithm, to which we add an implemented extension.
 
 ### Results
 
