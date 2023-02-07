@@ -74,20 +74,13 @@ def xlastovka_search(sequence : List[int], L: int, valueTarget: int, max_iter : 
             # stopping criteria
             if value > valueTarget:
                 return sFlipped, value
-                # stop_flag = True  ## if we found better value,break the loop and return the 
-                
-                # break
+
             else:
                 coord = sFlipped
                 PQ.append((sFlipped, value))
             
         closePivots.append(coord)
-    # if value < valueTarget:
-    #     ## if we failed to find new best value, return the old one with old coords
-    #     best_value = valueTarget
-    #     coord = sequence
-    # else:
-    #     best_value = value
+
     return coord, valueTarget
 if __name__ == "__main__":
     for _ in range(1000):
