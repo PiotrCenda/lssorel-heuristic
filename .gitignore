@@ -3,3 +3,5 @@ wandb_api_key.txt
 sweep_run.sh
 sweep_config.yml
 wandb/
+lssorel_test.err
+lssorel_test.out

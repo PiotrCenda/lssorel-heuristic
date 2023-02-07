@@ -1,6 +1,6 @@
 import timeit
 import numpy as np
-#import wandb
+import wandb
 import xlastovka
 
 def on_generation_xlastovka(ga_instance):
@@ -19,22 +19,22 @@ def on_generation_xlastovka(ga_instance):
             )
         ga_instance.best_solutions_fitness[-1] = best_solution_fitness
     print(f"Best solution fitness post local= {ga_instance.best_solutions_fitness[-1]}")
-    # wandb.log(
-    #     {
-    #         "fitness": ga_instance.best_solutions_fitness[-1],
-    #         "generation": ga_instance.generations_completed,
-    #     }
-    # )
+    wandb.log(
+        {
+            "fitness": ga_instance.best_solutions_fitness[-1],
+            "generation": ga_instance.generations_completed,
+        }
+    )
 def on_generation(ga_instance):
     """Determine what happens with the beginning of every generation."""
     print(f"Generation = {ga_instance.generations_completed}")
     print(f"Best solution fitness pre local= {ga_instance.best_solutions_fitness[-1]}")
-    # wandb.log(
-    #     {
-    #         "fitness": ga_instance.best_solutions_fitness[-1],
-    #         "generation": ga_instance.generations_completed,
-    #     }
-    # )
+    wandb.log(
+        {
+            "fitness": ga_instance.best_solutions_fitness[-1],
+            "generation": ga_instance.generations_completed,
+        }
+    )
 
 
 
